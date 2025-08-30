@@ -9,3 +9,4 @@ Currently available projects:
 - **valhalla** – [short description]
 
 > Source code and issues: [github.com/logchange](https://github.com/logchange)
+
