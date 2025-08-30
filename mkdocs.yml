@@ -1,7 +1,7 @@
-site_name: logchange • Documentation
+site_name: logchange
 site_url: https://logchange.dev
-repo_url: https://github.com/logchange/logchange.github.io
-edit_uri: edit/main/docs/
+repo_url: https://github.com/logchange/logchange
+edit_uri: https://github.com/logchange/logchange.github.io/edit/main/docs/
 
 theme:
   name: material
@@ -19,6 +19,9 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
+  - git-committers:
+      repository: logchange/logchange.github.io
+      branch: main
 
 nav:
   - Home: index.md
@@ -38,4 +41,5 @@ nav:
           - Usage: tools/valhalla/usage.md
           - Reference: tools/valhalla/reference.md
           - FAQ: tools/valhalla/faq.md
+  - About: about.md
   - Contributing: contributing.md

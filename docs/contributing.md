@@ -1,7 +1,33 @@
-# Contributing
+# Contributing to Logchange Docs
 
-Every page in this site can be quickly edited by clicking the **Edit this page** button in the top right corner.
+Thank you for helping improve our documentation!
 
-1. Click the button – GitHub will open the file in the `main` branch editor.
-2. Make your changes, add a commit message, and open a Pull Request.
-3. Once merged, the site will be rebuilt and deployed automatically.
+## Edit a page
+
+- Click the pencil icon in the top-right of any page to edit directly on GitHub.
+- Propose changes via a Pull Request.
+
+## Run the site locally
+
+Prerequisites:
+- Python 3.8+
+
+Install and serve:
+
+```bash
+pip install -r requirements.txt
+mkdocs serve
+```
+
+Open http://127.0.0.1:8000 in your browser. Changes reload automatically.
+
+## Content guidelines
+
+- Keep Getting Started concise with prerequisites, installation, and a quick start example.
+- Put detailed commands and options under Reference.
+- Add examples and troubleshooting notes under Usage and FAQ.
+
+## Build and deploy
+
+- On merge to `main`, GitHub Actions builds and deploys the site to GitHub Pages automatically.
+- The site is published at: https://logchange.github.io/ 
