@@ -1,19 +1,74 @@
 site_name: logchange
 site_url: https://logchange.dev
+site_author: Peter Zmilczak
+site_description: >-
+  At logchange, we develop tools to streamline software development processes, focusing on changelog management, 
+  application monitoring, and release automation. Our projects aim to enhance efficiency and maintain consistency across development workflows.
+
 repo_url: https://github.com/logchange/logchange
 edit_uri: https://github.com/logchange/logchange.github.io/edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2020 - 2025 logchange Team
 
 theme:
   name: material
   language: en
   features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - content.action.edit   # "Edit this page" button
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
     - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logchange-icon.png
+  favicon: assets/favicon.io
   icon:
-    repo: fontawesome/brands/github
+    logo: logo
+
 
 plugins:
   - search
@@ -22,6 +77,13 @@ plugins:
   - git-committers:
       repository: logchange/logchange.github.io
       branch: main
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/logchange
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/logchange
 
 nav:
   - Home: index.md
