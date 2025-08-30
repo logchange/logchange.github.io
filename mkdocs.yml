@@ -1,0 +1,41 @@
+site_name: logchange • Documentation
+site_url: https://logchange.dev
+repo_url: https://github.com/logchange/logchange.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.action.edit   # "Edit this page" button
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+nav:
+  - Home: index.md
+  - Tools:
+      - logchange:
+          - Getting Started: tools/logchange/getting-started.md
+          - Usage: tools/logchange/usage.md
+          - Reference: tools/logchange/reference.md
+          - FAQ: tools/logchange/faq.md
+      - hofund:
+          - Getting Started: tools/hofund/getting-started.md
+          - Usage: tools/hofund/usage.md
+          - Reference: tools/hofund/reference.md
+          - FAQ: tools/hofund/faq.md
+      - valhalla:
+          - Getting Started: tools/valhalla/getting-started.md
+          - Usage: tools/valhalla/usage.md
+          - Reference: tools/valhalla/reference.md
+          - FAQ: tools/valhalla/faq.md
+  - Contributing: contributing.md
