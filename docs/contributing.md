@@ -1,4 +1,4 @@
-# Contributing to Logchange Docs
+# Contributing to logchange Docs
 
 Thank you for helping improve our documentation!
 

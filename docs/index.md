@@ -1,6 +1,6 @@
 # logchange Organization
 
-Welcome to the Logchange organization documentation site.
+Welcome to the logchange organization documentation site.
 
 This site centralizes guides, FAQs, and references for our tools:
 

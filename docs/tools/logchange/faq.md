@@ -1,6 +1,6 @@
 # Frequently Asked Questions (FAQ)
 
-This FAQ addresses common questions, issues, and use cases when working with Logchange.
+This FAQ addresses common questions, issues, and use cases when working with logchange.
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ The CLI version has all the same features as the plugins but requires manual ver
 
 ### Q: Can I use logchange in an existing project with an existing CHANGELOG.md?
 
-**A:** Yes! Move your existing `CHANGELOG.md` to `changelog/archive.md` before running `logchange init`. Logchange will preserve your historical changelog and append new entries.
+**A:** Yes! Move your existing `CHANGELOG.md` to `changelog/archive.md` before running `logchange init`. logchange will preserve your historical changelog and append new entries.
 
 ### Q: Do I need to commit the generated CHANGELOG.md?
 
@@ -399,4 +399,4 @@ The entry will appear under each module section in the generated changelog.
 - 🐛 [Open an issue](https://github.com/logchange/logchange/issues) for bugs or feature requests
 - 💬 [Start a discussion](https://github.com/logchange/logchange/discussions) for general questions
 
-**🌟 Don't forget to star the [Logchange repository](https://github.com/logchange/logchange) if you find it helpful!**
+**🌟 Don't forget to star the [logchange repository](https://github.com/logchange/logchange) if you find it helpful!**

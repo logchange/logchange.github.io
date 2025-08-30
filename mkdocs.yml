@@ -87,21 +87,23 @@ extra:
 
 nav:
   - Home: index.md
-  - Tools:
-      - logchange:
-          - Getting Started: tools/logchange/getting-started.md
-          - Usage: tools/logchange/usage.md
-          - Reference: tools/logchange/reference.md
-          - FAQ: tools/logchange/faq.md
-      - hofund:
-          - Getting Started: tools/hofund/getting-started.md
-          - Usage: tools/hofund/usage.md
-          - Reference: tools/hofund/reference.md
-          - FAQ: tools/hofund/faq.md
-      - valhalla:
-          - Getting Started: tools/valhalla/getting-started.md
-          - Usage: tools/valhalla/usage.md
-          - Reference: tools/valhalla/reference.md
-          - FAQ: tools/valhalla/faq.md
+  - 🪵logchange:
+      - index: tools/logchange/index.md
+      - Getting Started: tools/logchange/getting-started.md
+      - Usage: tools/logchange/usage.md
+      - Reference: tools/logchange/reference.md
+      - FAQ: tools/logchange/faq.md
+  - 🗡hofund:
+      - index: tools/hofund/index.md
+      - Getting Started: tools/hofund/getting-started.md
+      - Usage: tools/hofund/usage.md
+      - Reference: tools/hofund/reference.md
+      - FAQ: tools/hofund/faq.md
+  - 🌌valhalla:
+      - index: tools/valhalla/index.md
+      - Getting Started: tools/valhalla/getting-started.md
+      - Usage: tools/valhalla/usage.md
+      - Reference: tools/valhalla/reference.md
+      - FAQ: tools/valhalla/faq.md
   - About: about.md
   - Contributing: contributing.md

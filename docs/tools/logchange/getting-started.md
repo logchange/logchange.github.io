@@ -1,22 +1,22 @@
-# Getting Started with Logchange
+# Getting Started with logchange
 
-Welcome to Logchange! 🌳 This tool helps you maintain clean, conflict-free changelogs by storing individual changes as separate YAML files and generating your `CHANGELOG.md` during release.
+Welcome to logchange! 🌳 This tool helps you maintain clean, conflict-free changelogs by storing individual changes as separate YAML files and generating your `CHANGELOG.md` during release.
 
-## What is Logchange?
+## What is logchange?
 
-Logchange solves common problems with traditional changelog management:
+logchange solves common problems with traditional changelog management:
 
 - **🪓 Merge conflicts**: No more conflicts when multiple developers update the same `CHANGELOG.md` file
 - **🌲 Forgotten entries**: Automated reminders to document changes as part of your development workflow
 - **📜 Release notes**: Automatic generation of release notes from your changelog entries
 
-Instead of editing `CHANGELOG.md` directly, you create individual YAML files for each change, and Logchange generates the final changelog during your release process.
+Instead of editing `CHANGELOG.md` directly, you create individual YAML files for each change, and logchange generates the final changelog during your release process.
 
 ## Quick Start
 
 ### Choose Your Installation Method
 
-Logchange is available in three flavors:
+logchange is available in three flavors:
 
 1. **CLI Binary** - Works with any project, regardless of technology
 2. **Maven Plugin** - Perfect for Maven-based Java projects
@@ -171,7 +171,7 @@ This will:
 
 ## Entry Types
 
-Logchange supports these entry types by default:
+logchange supports these entry types by default:
 
 - `added` - New features
 - `changed` - Changes to existing functionality
@@ -190,8 +190,8 @@ Logchange supports these entry types by default:
 
 ## Example Projects
 
-See Logchange in action:
-- [Logchange itself](https://github.com/logchange/logchange/blob/main/CHANGELOG.md)
+See logchange in action:
+- [logchange itself](https://github.com/logchange/logchange/blob/main/CHANGELOG.md)
 - [Hofund project](https://github.com/logchange/hofund/blob/master/CHANGELOG.md)
 
 ---

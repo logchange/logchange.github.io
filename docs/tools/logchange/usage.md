@@ -1,6 +1,6 @@
 # Usage Guide
 
-This comprehensive guide covers detailed usage patterns, advanced features, and best practices for Logchange.
+This comprehensive guide covers detailed usage patterns, advanced features, and best practices for logchange.
 
 ## Table of Contents
 
@@ -287,7 +287,7 @@ changelog/
 ├── unreleased/           # Default unreleased changes
 ```
 
-When releasing v1.3.7, Logchange looks for `unreleased-1.3.7` first, then falls back to `unreleased`.
+When releasing v1.3.7, logchange looks for `unreleased-1.3.7` first, then falls back to `unreleased`.
 
 ### Branch Management
 

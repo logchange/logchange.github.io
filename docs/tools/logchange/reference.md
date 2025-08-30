@@ -1,6 +1,6 @@
-# Logchange Reference Documentation
+# logchange Reference Documentation
 
-Complete reference for Logchange commands, configuration options, and YAML format specifications.
+Complete reference for logchange commands, configuration options, and YAML format specifications.
 
 ## Table of Contents
 

@@ -1,4 +1,4 @@
-# About Logchange
+# About logchange
 
 We build tools to streamline changelogs, configuration, and developer workflows for modern software teams.
 
