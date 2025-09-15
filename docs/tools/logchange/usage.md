@@ -4,6 +4,10 @@
 
 This comprehensive guide covers detailed usage patterns, advanced features, and best practices for logchange.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/logchange/logchange/refs/heads/main/logchange.gif" alt="logchange in action"/>
+</p>
+
 ## Table of Contents
 
 - [Basic Workflow](#basic-workflow)
