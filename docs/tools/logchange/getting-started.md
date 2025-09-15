@@ -1,5 +1,7 @@
 # Getting Started with logchange
 
+> GitHub repository: [https://github.com/logchange/logchange](https://github.com/logchange/logchange)
+
 Welcome to logchange! 🌳 This tool helps you maintain clean, conflict-free changelogs by storing individual changes as separate YAML files and generating your `CHANGELOG.md` during release.
 
 ## What is logchange?

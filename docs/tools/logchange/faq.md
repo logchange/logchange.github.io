@@ -1,5 +1,7 @@
 # Frequently Asked Questions (FAQ)
 
+> GitHub repository: [https://github.com/logchange/logchange](https://github.com/logchange/logchange)
+
 This FAQ addresses common questions, issues, and use cases when working with logchange.
 
 ## Table of Contents

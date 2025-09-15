@@ -1,6 +1,6 @@
 # Frequently Asked Questions (FAQ)
 
-> GitHub repository: https://github.com/logchange/hofund
+> GitHub repository: [https://github.com/logchange/hofund](https://github.com/logchange/hofund)
 
 This document addresses common questions, troubleshooting tips, and best practices for using Hofund.
 

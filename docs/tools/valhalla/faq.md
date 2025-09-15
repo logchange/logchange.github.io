@@ -1,6 +1,6 @@
 # ❓ Frequently Asked Questions
 
-> GitHub repository: https://github.com/logchange/valhalla
+> GitHub repository: [https://github.com/logchange/valhalla](https://github.com/logchange/valhalla)
 
 This FAQ covers common questions about Valhalla, troubleshooting tips, and clarifications about features and limitations.
 
