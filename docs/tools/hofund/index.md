@@ -1,5 +1,7 @@
 # 🗡️💥 Hofund Documentation 💥🗡️
 
+> GitHub repository: https://github.com/logchange/hofund
+
 Welcome to the Hofund documentation! Hofund is a monitoring tool for Spring Boot applications that provides connection health checking, Prometheus metrics exposure, and seamless integration with Grafana dashboards.
 
 ## 📚 Documentation Overview

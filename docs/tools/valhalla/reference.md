@@ -1,5 +1,7 @@
 # 📚 Configuration Reference
 
+> GitHub repository: https://github.com/logchange/valhalla
+
 This reference provides complete documentation for all Valhalla configuration options, parameters, and features.
 
 ## Table of Contents
