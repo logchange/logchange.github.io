@@ -1,5 +1,7 @@
 # 📖 Usage Guide
 
+> GitHub repository: https://github.com/logchange/valhalla
+
 This guide covers advanced usage scenarios, best practices, and common workflows for Valhalla.
 
 ## Table of Contents

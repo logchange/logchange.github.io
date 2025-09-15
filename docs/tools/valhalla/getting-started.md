@@ -1,5 +1,7 @@
 # 🚀 Getting Started with Valhalla
 
+> GitHub repository: https://github.com/logchange/valhalla
+
 Welcome to Valhalla! This guide will help you get up and running with automated software releases in no time.
 
 ## What is Valhalla?

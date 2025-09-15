@@ -20,6 +20,12 @@ Use the navigation to explore each tool’s Getting Started, Usage, FAQ, and Ref
   - **🗡️hofund**: [Getting Started](tools/hofund/getting-started.md) | [Usage](tools/hofund/usage.md) | [FAQ](tools/hofund/faq.md) | [Reference](tools/hofund/reference.md)
   - **🌌valhalla**: [Getting Started](tools/valhalla/getting-started.md) | [Usage](tools/valhalla/usage.md) | [FAQ](tools/valhalla/faq.md) | [Reference](tools/valhalla/reference.md)
 
+## GitHub Repositories
+
+- 🪵 logchange: https://github.com/logchange/logchange
+- 🗡️ hofund: https://github.com/logchange/hofund
+- 🌌 valhalla: https://github.com/logchange/valhalla
+
 ## Contributing
 
 See [Contributing](contributing.md) for how to make changes to this site or add documentation for new tools.

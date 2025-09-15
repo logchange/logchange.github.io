@@ -1,5 +1,7 @@
 # Reference Documentation
 
+> GitHub repository: https://github.com/logchange/hofund
+
 This document provides complete API reference, configuration options, and technical specifications for Hofund.
 
 ## Table of Contents
