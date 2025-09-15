@@ -1,6 +1,6 @@
 # Usage Guide
 
-> GitHub repository: https://github.com/logchange/hofund
+> GitHub repository: [https://github.com/logchange/hofund](https://github.com/logchange/hofund)
 
 This guide covers detailed usage scenarios, configuration examples, and advanced integration patterns for Hofund.
 

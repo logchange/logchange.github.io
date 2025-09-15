@@ -1,5 +1,7 @@
 # logchange Reference Documentation
 
+> GitHub repository: [https://github.com/logchange/logchange](https://github.com/logchange/logchange)
+
 Complete reference for logchange commands, configuration options, and YAML format specifications.
 
 ## Table of Contents

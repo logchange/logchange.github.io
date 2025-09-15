@@ -1,5 +1,7 @@
 # logchange Documentation
 
+> GitHub repository: [https://github.com/logchange/logchange](https://github.com/logchange/logchange)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/25181517/138590008-f98457b3-602a-4af5-9b28-0c499fe7e378.png" />
 </p>

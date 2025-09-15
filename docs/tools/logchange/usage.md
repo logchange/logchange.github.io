@@ -1,5 +1,7 @@
 # Usage Guide
 
+> GitHub repository: [https://github.com/logchange/logchange](https://github.com/logchange/logchange)
+
 This comprehensive guide covers detailed usage patterns, advanced features, and best practices for logchange.
 
 ## Table of Contents

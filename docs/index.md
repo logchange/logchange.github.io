@@ -22,9 +22,9 @@ Use the navigation to explore each tool’s Getting Started, Usage, FAQ, and Ref
 
 ## GitHub Repositories
 
-- 🪵 logchange: https://github.com/logchange/logchange
-- 🗡️ hofund: https://github.com/logchange/hofund
-- 🌌 valhalla: https://github.com/logchange/valhalla
+- 🪵 logchange: [https://github.com/logchange/logchange](https://github.com/logchange/logchange)
+- 🗡️ hofund: [https://github.com/logchange/hofund](https://github.com/logchange/hofund)
+- 🌌 valhalla: [https://github.com/logchange/valhalla](https://github.com/logchange/valhalla)
 
 ## Contributing
 
