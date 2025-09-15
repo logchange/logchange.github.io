@@ -21,6 +21,10 @@
         <img src="https://codecov.io/gh/logchange/logchange/graph/badge.svg?token=SP3V6ZQ039" alt="codecov"/></a>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/logchange/logchange/refs/heads/main/logchange.gif" alt="logchange in action"/>
+</p>
+
 ## Welcome to logchange! 🌳
 
 logchange is a powerful tool that revolutionizes changelog management by solving common problems like merge conflicts and forgotten entries. Instead of editing `CHANGELOG.md` directly, you create individual YAML files for each change, and logchange generates your final changelog during release.
