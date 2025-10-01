@@ -17,13 +17,14 @@ Hofund helps you:
 Before you start, ensure your project meets these requirements:
 
 - **Java**: Version 17+ (hofund-core supports Java 8+)
-- **Spring Boot**: Version 3.3.0+ for Hofund 2.x.x
+- **Spring Boot**: Version 3.3.0+ for Hofund 2.x.x (Hofund 1.x.x supported Spring Boot 2.X.X)
 - **Maven**: For dependency management
 
-Required dependencies (usually included with Spring Boot 2.2.0+):
-- spring-framework 5.2.12.RELEASE or later
-- micrometer-io 1.3.0 or later  
-- slf4j 1.7.28 or later
+Required dependencies (usually included with Spring Boot):
+
+- spring-framework
+- micrometer-io 
+- slf4j
 
 ## Installation
 

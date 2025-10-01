@@ -40,32 +40,32 @@ logchange is a powerful tool that revolutionizes changelog management by solving
 
 ### Quick Start
 - **[Getting Started Guide](getting-started.md)** - New to logchange? Start here!
-  - Installation options (CLI, Maven, Gradle)
-  - Project initialization
-  - Creating your first changelog entry
-  - Basic workflow
+    - Installation options (CLI, Maven, Gradle)
+    - Project initialization
+    - Creating your first changelog entry
+    - Basic workflow
 
 ### Core Documentation
 - **[Usage Guide](usage.md)** - Comprehensive usage instructions
-  - Detailed workflow explanations
-  - YAML entry format and examples
-  - Advanced features and configuration
-  - CI/CD integration patterns
-  - Templates and customization
+    - Detailed workflow explanations
+    - YAML entry format and examples
+    - Advanced features and configuration
+    - CI/CD integration patterns
+    - Templates and customization
 
 - **[FAQ](faq.md)** - Frequently asked questions
-  - Common issues and solutions
-  - Best practices and recommendations
-  - Troubleshooting guide
-  - Migration strategies
+    - Common issues and solutions
+    - Best practices and recommendations
+    - Troubleshooting guide
+    - Migration strategies
 
 - **[Reference Documentation](reference.md)** - Complete technical reference
-  - All CLI commands and options
-  - Maven Plugin goals and configuration
-  - Gradle Plugin tasks
-  - YAML format specification
-  - Configuration options
-  - Template system
+        - All CLI commands and options
+    - Maven Plugin goals and configuration
+    - Gradle Plugin tasks
+    - YAML format specification
+    - Configuration options
+    - Template system
 
 ### Project Information
 - **[README](README.md)** - Project overview and basic usage
@@ -84,16 +84,16 @@ logchange is a powerful tool that revolutionizes changelog management by solving
 ### 30-Second Setup
 
 1. **Initialize your project:**
-   ```bash
-   # CLI
-   logchange init
-   
-   # Maven
-   mvn logchange:init
-   
-   # Gradle
-   ./gradlew logchangeInit
-   ```
+```bash
+# CLI
+logchange init
+
+# Maven
+mvn logchange:init
+
+# Gradle
+./gradlew logchangeInit
+```
 
 2. **Create your first entry:**
    ```bash

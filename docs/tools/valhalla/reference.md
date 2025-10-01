@@ -528,13 +528,13 @@ Valhalla provides several predefined variables that are automatically available 
 
 These are extracted from the branch name or `VALHALLA_RELEASE_CMD` environment variable.
 
-| Variable | Description | Example (for `release-2.1.3-RC1`) |
-|----------|-------------|-----------------------------------|
-| `{VERSION}` | Complete version string | `2.1.3-RC1` |
-| `{VERSION_MAJOR}` | Major version number | `2` |
-| `{VERSION_MINOR}` | Minor version number | `1` |
-| `{VERSION_PATCH}` | Patch version number | `3` |
-| `{VERSION_SLUG}` | URL-safe version | `2-1-3-rc1` |
+| Variable          | Description             | Example (for `release-2.1.3-RC1`) |
+|-------------------|-------------------------|-----------------------------------|
+| `{VERSION}`       | Complete version string | `2.1.3-RC1`                       |
+| `{VERSION_MAJOR}` | Major version number    | `2`                               |
+| `{VERSION_MINOR}` | Minor version number    | `1`                               |
+| `{VERSION_PATCH}` | Patch version number    | `3`                               |
+| `{VERSION_SLUG}`  | URL-safe version        | `2-1-3-rc1`                       |
 
 **Version Slug Rules:**
 - Converts to lowercase
@@ -544,9 +544,17 @@ These are extracted from the branch name or `VALHALLA_RELEASE_CMD` environment v
 
 ### System Variables
 
-| Variable | Description | Example |
-|----------|-------------|---------|
+| Variable           | Description         | Example         |
+|--------------------|---------------------|-----------------|
 | `{VALHALLA_TOKEN}` | GitLab access token | `glpat-xxxx...` |
+
+**Security Note:** The token variable is automatically masked in logs and output for security.
+
+### Other Variables
+
+| Variable   | Description                                           | Example  |
+|------------|-------------------------------------------------------|----------|
+| `{AUTHOR}` | Author of the release (who triggered release process) | `JonDoe` |
 
 **Security Note:** The token variable is automatically masked in logs and output for security.
 
@@ -554,12 +562,12 @@ These are extracted from the branch name or `VALHALLA_RELEASE_CMD` environment v
 
 Valhalla automatically selects configuration files based on branch patterns:
 
-| Branch Pattern | Configuration File | Example |
-|----------------|-------------------|---------|
-| `release-*` | `valhalla.yml` | `release-1.2.3` |
-| `release-hotfix-*` | `valhalla-hotfix.yml` | `release-hotfix-1.2.4` |
-| `release-preview-*` | `valhalla-preview.yml` | `release-preview-2.0.0` |
-| `release-{type}-*` | `valhalla-{type}.yml` | `release-beta-1.0.0` → `valhalla-beta.yml` |
+| Branch Pattern      | Configuration File     | Example                                    |
+|---------------------|------------------------|--------------------------------------------|
+| `release-*`         | `valhalla.yml`         | `release-1.2.3`                            |
+| `release-hotfix-*`  | `valhalla-hotfix.yml`  | `release-hotfix-1.2.4`                     |
+| `release-preview-*` | `valhalla-preview.yml` | `release-preview-2.0.0`                    |
+| `release-{type}-*`  | `valhalla-{type}.yml`  | `release-beta-1.0.0` → `valhalla-beta.yml` |
 
 ## Environment Integration
 
@@ -569,15 +577,15 @@ All GitLab CI/CD predefined variables are available in Valhalla configurations:
 
 **Common GitLab Variables:**
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `{CI_PROJECT_NAME}` | Project name | `my-application` |
-| `{CI_PROJECT_ID}` | Project ID | `123` |
-| `{CI_COMMIT_SHA}` | Commit hash | `a1b2c3d4...` |
-| `{CI_COMMIT_TIMESTAMP}` | Commit timestamp | `2024-01-15T10:30:00Z` |
-| `{CI_PIPELINE_ID}` | Pipeline ID | `456789` |
-| `{CI_JOB_ID}` | Job ID | `987654` |
-| `{GITLAB_USER_NAME}` | User triggering job | `john.doe` |
+| Variable                | Description         | Example                |
+|-------------------------|---------------------|------------------------|
+| `{CI_PROJECT_NAME}`     | Project name        | `my-application`       |
+| `{CI_PROJECT_ID}`       | Project ID          | `123`                  |
+| `{CI_COMMIT_SHA}`       | Commit hash         | `a1b2c3d4...`          |
+| `{CI_COMMIT_TIMESTAMP}` | Commit timestamp    | `2024-01-15T10:30:00Z` |
+| `{CI_PIPELINE_ID}`      | Pipeline ID         | `456789`               |
+| `{CI_JOB_ID}`           | Job ID              | `987654`               |
+| `{GITLAB_USER_NAME}`    | User triggering job | `john.doe`             |
 
 **Usage Example:**
 ```yaml
