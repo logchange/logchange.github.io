@@ -29,6 +29,10 @@ Valhalla uses YAML configuration files named according to the release type:
 # Optional: Inherit from parent configurations
 extends:
   - https://example.com/parent-config.yml
+    
+# Optional: command to get version from
+version:
+  from_command: "cat version.txt"
 
 # Optional: Custom variables for string interpolation
 variables:
@@ -139,6 +143,16 @@ variables:
 
 # Inherits COMPANY and commit_before_release.msg from parent
 ```
+
+## Version
+
+### `from_command`
+
+**Type:** `object`  
+**Required:** No  
+**Default:** ``
+
+Allows getting a version based on command (executed in bash), which allows to user only "release-" branch name, which reduces mistakes
 
 ## Variables
 
