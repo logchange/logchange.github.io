@@ -91,7 +91,7 @@ logchange exposes strongly‑typed domain objects to the template context:
    - `getDetachedImportantNotes(): Stream<DetachedImportantNote>`
    - `getDetachedConfigurations(): Stream<DetachedConfiguration>`
 
-_Note: Jinjava can iterate over Java Lists and, in most cases, Streams. If a Stream does not iterate in your environment, prefer the list-returning helpers like getEntries() or getConfigurations()._
+**Note:** Jinjava can iterate over Java Lists and, in most cases, Streams. If a Stream does not iterate in your environment, prefer the list-returning helpers like getEntries() or getConfigurations().
 
 ### Sample Jinja template — Version summary (Markdown)
 
