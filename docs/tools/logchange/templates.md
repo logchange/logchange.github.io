@@ -1,12 +1,11 @@
 # Jinja templating guide
 
 **This guide explains how to use Jinja2 templates to customize:**
-- the main changelog generated from all versions (**changelog templates**), and
-- per‑version release summaries (**version‑summary templates**).
+
+  - the main changelog generated from all versions (**changelog templates**), and
+  - per‑version release summaries (**version‑summary templates**).
 
 **Note:** Jinja support is implemented with Jinjava. Most Jinja2 syntax works (loops, if, filters). Trim/lstrip blocks are enabled, so whitespace behaves similarly to standard Jinja2.
-
-**See also:** [the Template System overview in the reference docs](reference.md#template-system)
 
 ### Quick start
 
@@ -33,11 +32,13 @@ Place your templates under: `changelog/.templates/`
 ```
 
 3) Place your template files:
-- `changelog/.templates/my-version-summary.md`
-- `changelog/.templates/my-changelog.md`
+
+   - `changelog/.templates/my-version-summary.md`
+   - `changelog/.templates/my-changelog.md`
 
 4) Run logchange as usual
-- `logchange generate` or `mvn logchange:generate`
+
+   - `logchange generate` or `mvn logchange:generate`
 
 ### Where generated files are written
 
@@ -47,12 +48,16 @@ For each version `X.Y.Z`, every template listed under `templates.version_summary
 
 The output file name is the file name part of the path you configured. **logchange** treats the configured path as a literal file name (it does not strip extensions like .j2). If you want the output to be `my-version-summary.md`, name the template `my-version-summary.md`.
 
+**Note:** If you name your template `version-summary.md`, the output file will overwrite the default `version-summary.md` file.
+
 #### Changelog templates (main changelog)
 Every template listed under `templates.changelog_templates` is rendered **once for the whole project** and saved at the repository root (next to `CHANGELOG.md`): <repo_root>/<outputFileName>
 
 The output file name is the file name part of the path you configured. If you want the output to be `my-changelog.md`, name the template `my-changelog.md` (**logchange** treats the configured path as a literal file name).
 
 **Important:** Unlike version-summary templates, changelog templates do NOT write into each version directory.
+
+**Note:** If you name your template `CHANGELOG.md`, the output file will overwrite the default `CHANGELOG.md` file.
 
 
 ### Objects available to templates
@@ -64,29 +69,29 @@ logchange exposes strongly‑typed domain objects to the template context:
 **changelog** — type: [dev.logchange.core.domain.changelog.model.Changelog](https://github.com/logchange/logchange/blob/master/logchange-core/src/main/java/dev/logchange/core/domain/changelog/model/Changelog.java)
 
 **Useful properties/methods:**
-  - versions: Iterable<ChangelogVersion>
-  - archives: ChangelogArchives (optional historical content)
+
+   - versions: Iterable<ChangelogVersion>
+   - archives: ChangelogArchives (optional historical content)
 
 #### For version_summary_templates (single release):
 
 **version** — type: [dev.logchange.core.domain.changelog.model.version.ChangelogVersion](https://github.com/logchange/logchange/blob/master/logchange-core/src/main/java/dev/logchange/core/domain/changelog/model/version/ChangelogVersion.java)
 
 **Useful properties/methods:**
-  - version: [dev.logchange.core.domain.changelog.model.version.Version](https://github.com/logchange/logchange/blob/master/logchange-core/src/main/java/dev/logchange/core/domain/changelog/model/version/Version.java)
-  - releaseDateTime: java.time-like value stringified in output
-  - entriesGroups: List<ChangelogVersionEntriesGroup>
-    Each group has:
+
+   - version: [dev.logchange.core.domain.changelog.model.version.Version](https://github.com/logchange/logchange/blob/master/logchange-core/src/main/java/dev/logchange/core/domain/changelog/model/version/Version.java)
+   - releaseDateTime: java.time-like value stringified in output
+   - entriesGroups: List<ChangelogVersionEntriesGroup> Each group has:
       - type: display name of the group (e.g., Added, Removed, Fixed, etc.)
       - notEmpty: boolean
       - entries: List<ChangelogEntry>
-  - `getEntries():` all entries (flattened)
-  - `getEntriesWithOrder():` stream of entries respecting original ordering
-  - `getConfigurations(): List<ChangelogEntryConfiguration>` (useful to build a configuration changes table)
-  - `getDetachedImportantNotes(): Stream<DetachedImportantNote>`
-  - `getDetachedConfigurations(): Stream<DetachedConfiguration>`
+   - `getEntries():` all entries (flattened)
+   - `getEntriesWithOrder():` stream of entries respecting original ordering
+   - `getConfigurations(): List<ChangelogEntryConfiguration>` (useful to build a configuration changes table)
+   - `getDetachedImportantNotes(): Stream<DetachedImportantNote>`
+   - `getDetachedConfigurations(): Stream<DetachedConfiguration>`
 
 _Note: Jinjava can iterate over Java Lists and, in most cases, Streams. If a Stream does not iterate in your environment, prefer the list-returning helpers like getEntries() or getConfigurations()._
-
 
 ### Sample Jinja template — Version summary (Markdown)
 
