@@ -51,7 +51,8 @@ logchange is a powerful tool that revolutionizes changelog management by solving
     - YAML entry format and examples
     - Advanced features and configuration
     - CI/CD integration patterns
-    - Templates and customization
+
+- **[Templating with Jinja](templates.md)** - How to customize outputs with templates
 
 - **[FAQ](faq.md)** - Frequently asked questions
     - Common issues and solutions

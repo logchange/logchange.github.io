@@ -391,6 +391,8 @@ release:
 
 ## Templates and Customization
 
+For a step-by-step guide and sample Jinja templates, see the dedicated [Templating Guide](templates.md).
+
 ### Entry Templates
 
 Customize how entries appear in your changelog:

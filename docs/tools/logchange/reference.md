@@ -500,93 +500,7 @@ aggregates:
 
 ## Template System
 
-### Custom Version Summary Templates
-
-Create templates in `changelog/.templates/`:
-
-#### HTML Template Example
-
-```html
-<!-- changelog/.templates/release-notes.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ version.version }} Release Notes</title>
-</head>
-<body>
-    <h1>Release {{ version.version }}</h1>
-    <p>Released: {{ version.releaseDateTime }}</p>
-    
-    {% for entriesGroup in version.entriesGroups %}
-    {% if entriesGroup.notEmpty %}
-    <section>
-        <h2>{{ entriesGroup.type }}</h2>
-        <ul>
-        {% for entry in entriesGroup.entries %}
-            <li>{{ entry }}</li>
-        {% endfor %}
-        </ul>
-    </section>
-    {% endif %}
-    {% endfor %}
-    
-    {% if version.hasImportantNotes %}
-    <section>
-        <h2>Important Notes</h2>
-        <ul>
-        {% for note in version.importantNotes %}
-            <li>{{ note }}</li>
-        {% endfor %}
-        </ul>
-    </section>
-    {% endif %}
-</body>
-</html>
-```
-
-#### JSON Template Example
-
-`changelog/.templates/version-summary.json`:
-```text
-{
-  "version": "{{ version.version }}",
-  "releaseDate": "{{ version.releaseDateTime }}",
-  "changes": [
-    {% for entriesGroup in version.entriesGroups %}
-    {% if entriesGroup.notEmpty %}
-    {
-      "type": "{{ entriesGroup.type }}",
-      "entries": [
-        {% for entry in entriesGroup.entries %}
-        "{{ entry }}"{% if not loop.last %},{% endif %}
-        {% endfor %}
-      ]
-    }{% if not loop.last %},{% endif %}
-    {% endif %}
-    {% endfor %}
-  ]
-}
-```
-
-### Template Objects Reference
-
-#### Version Object
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `version.version` | String | Version number |
-| `version.releaseDateTime` | String | Release date/time |
-| `version.entriesGroups` | Array | Grouped entries by type |
-| `version.importantNotes` | Array | Important notes |
-| `version.hasImportantNotes` | Boolean | Whether important notes exist |
-
-#### EntriesGroup Object
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `entriesGroup.type` | String | Entry type label |
-| `entriesGroup.entries` | Array | Formatted entries |
-| `entriesGroup.notEmpty` | Boolean | Whether group has entries |
+For a hands-on tutorial with sample Jinja templates and available objects, see the dedicated Templating Guide: [templates.md](templates.md).
 
 ## File Structure
 
@@ -671,17 +585,6 @@ export LOGCHANGE_OUTPUT_FILE="CHANGES.md"
 logchange generate
 ```
 
-## Exit Codes
-
-| Code | Description |
-|------|-------------|
-| `0` | Success |
-| `1` | General error |
-| `2` | Invalid arguments |
-| `3` | File not found |
-| `4` | YAML syntax error |
-| `5` | Configuration error |
-| `6` | Network error (aggregation) |
 
 ## Best Practices Summary
 

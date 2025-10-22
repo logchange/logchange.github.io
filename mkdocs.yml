@@ -92,6 +92,7 @@ nav:
       - Getting Started: tools/logchange/getting-started.md
       - Usage: tools/logchange/usage.md
       - Reference: tools/logchange/reference.md
+      - Templating Guide: tools/logchange/templates.md
       - FAQ: tools/logchange/faq.md
   - 🗡hofund:
       - index: tools/hofund/index.md

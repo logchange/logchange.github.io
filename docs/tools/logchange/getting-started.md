@@ -189,6 +189,7 @@ logchange supports these entry types by default:
 - Read the [Usage Guide](usage.md) for detailed instructions
 - Check the [FAQ](faq.md) for common questions
 - Explore the [Reference](reference.md) for complete configuration options
+- Customize outputs with templates: see the [Templating Guide](templates.md)
 
 ## Example Projects
 

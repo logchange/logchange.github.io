@@ -349,6 +349,8 @@ Then run: `mvn logchange:aggregate -DaggregateVersion=2.1.0`
 - **Full changelog**: Custom markdown templates
 - **Integration**: Generate data for other tools
 
+See the [Templating Guide](templates.md) for examples, available objects, and best practices.
+
 ### Q: How do I handle configuration changes that need documentation?
 
 **A:** Use the `configurations` field:
