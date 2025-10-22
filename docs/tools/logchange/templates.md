@@ -92,7 +92,7 @@ _Note: Jinjava can iterate over Java Lists and, in most cases, Streams. If a Str
 
 Place at `changelog/.templates/my-version-summary.md`
 
-```markdown
+```jinja
 <!-- Prevents auto-formatting in some IDEs -->
 <!-- @formatter:off -->
 <!-- noinspection -->
@@ -134,7 +134,8 @@ Place at `changelog/.templates/my-version-summary.md`
 ### Sample Jinja template — Main changelog (Markdown)
 
 Place at `changelog/.templates/my-changelog.md`
-```markdown
+```jinja
+<!-- Prevents auto-formatting in some IDEs -->
 <!-- @formatter:off -->
 <!-- noinspection -->
 
