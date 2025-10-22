@@ -189,9 +189,9 @@ Place at `changelog/.templates/my-changelog.md`
 ### Tips and gotchas
 
 - File locations:
-  - Templates are always loaded from changelog/.templates/<path>.
-  - For changelog_templates, the output path is <repo_root>/<fileNameFromPath>.
-  - For version_summary_templates, the output path is changelog/vX.Y.Z/<fileNameFromPath>.
+   - Templates are always loaded from changelog/.templates/<path>.
+   - For changelog_templates, the output path is <repo_root>/<fileNameFromPath>.
+   - For version_summary_templates, the output path is changelog/vX.Y.Z/<fileNameFromPath>.
 - Start simple: you can rely on Java objects’ toString for ChangelogEntry ({{ entry }}) to get the default entry format.
 - Need HTML instead of Markdown? Use an .html extension in your template file name and write HTML.
 - Whitespace: Jinjava is configured with trimBlocks and lstripBlocks to make template whitespace predictable.
