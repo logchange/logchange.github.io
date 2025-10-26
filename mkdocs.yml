@@ -65,7 +65,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   logo: assets/logchange-icon.png
-  favicon: assets/favicon.io
+  favicon: assets/favicon.ico
   icon:
     logo: logo
 
