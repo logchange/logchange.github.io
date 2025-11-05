@@ -76,11 +76,11 @@ logchange is a powerful tool that revolutionizes changelog management by solving
 
 ### Choose Your Installation Method
 
-| Method | Best For | Installation |
-|--------|----------|--------------|
-| **CLI** | Any project type | `brew install logchange/tap/logchange` |
-| **Maven** | Java/Maven projects | Add plugin to `pom.xml` |
-| **Gradle** | Java/Gradle projects | Add plugin to `build.gradle` |
+| Method     | Best For             | Installation                           |
+|------------|----------------------|----------------------------------------|
+| **CLI**    | Any project type     | `brew install logchange/tap/logchange` |
+| **Maven**  | Java/Maven projects  | Add plugin to `pom.xml`                |
+| **Gradle** | Java/Gradle projects | Add plugin to `build.gradle`           |
 
 ### 30-Second Setup
 
@@ -134,7 +134,7 @@ Perfect for Java projects using Maven:
 <plugin>
     <groupId>dev.logchange</groupId>
     <artifactId>logchange-maven-plugin</artifactId>
-    <version>1.19.5</version>
+    <version>X.X.X</version> <!-- https://central.sonatype.com/artifact/dev.logchange/logchange-maven-plugin -->
 </plugin>
 ```
 
@@ -143,7 +143,7 @@ Ideal for Java projects using Gradle:
 
 ```groovy
 plugins {
-    id 'dev.logchange' version '1.19.5'
+    id 'dev.logchange' version 'X.X.X' // https://central.sonatype.com/artifact/dev.logchange/dev.logchange.gradle.plugin
 }
 ```
 

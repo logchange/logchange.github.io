@@ -27,7 +27,7 @@ Complete reference for logchange commands, configuration options, and YAML forma
 
 ### logchange init
 
-Initialize a project with logchange structure.
+Initialize a project with a logchange structure.
 
 ```bash
 logchange init [options]
@@ -143,16 +143,17 @@ Create a release by moving unreleased entries.
 logchange release [options]
 ```
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `--path, -p` | current directory | Project root directory |
-| `--versionToRelease` | **required** | Version number (e.g., 1.2.0) |
-| `--unreleasedVersionDir` | `unreleased` | Unreleased directory |
-| `--inputDir` | `changelog` | Input directory |
-| `--outputFile` | `CHANGELOG.md` | Output filename |
-| `--configFile` | `logchange-config.yml` | Configuration file |
-| `--generateChangesXml` | `false` | Generate XML changes file |
-| `--xmlOutputFile` | `changes.xml` | XML output filename |
+| Option                   | Default                | Description                                       |
+|--------------------------|------------------------|---------------------------------------------------|
+| `--path, -p`             | current directory      | Project root directory                            |
+| `--versionToRelease`     | **required**           | Version number (e.g., 1.2.0)                      |
+| `--unreleasedVersionDir` | `unreleased`           | Unreleased directory                              |
+| `--inputDir`             | `changelog`            | Input directory                                   |
+| `--outputFile`           | `CHANGELOG.md`         | Output filename                                   |
+| `--configFile`           | `logchange-config.yml` | Configuration file                                |
+| `--generateChangesXml`   | `false`                | Generate XML changes file                         |
+| `--xmlOutputFile`        | `changes.xml`          | XML output filename                               |
+| `--releaseDate`          | `today`                | `none` `today` or any date in format `yyyy-MM-dd` |
 
 **Examples:**
 ```bash
@@ -174,12 +175,12 @@ Aggregate changelogs from multiple projects.
 logchange aggregate [options]
 ```
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `--path, -p` | current directory | Project root directory |
-| `--aggregateVersion` | **required** | Version to aggregate |
-| `--inputDir` | `changelog` | Input directory |
-| `--configFile` | `logchange-config.yml` | Configuration file |
+| Option               | Default                | Description            |
+|----------------------|------------------------|------------------------|
+| `--path, -p`         | current directory      | Project root directory |
+| `--aggregateVersion` | **required**           | Version to aggregate   |
+| `--inputDir`         | `changelog`            | Input directory        |
+| `--configFile`       | `logchange-config.yml` | Configuration file     |
 
 **Examples:**
 ```bash
@@ -198,12 +199,12 @@ Archive old versions to reduce directory clutter.
 logchange archive [options]
 ```
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `--path, -p` | current directory | Project root directory |
-| `--version` | **required** | Archive versions up to (inclusive) |
-| `--inputDir` | `changelog` | Input directory |
-| `--configFile` | `logchange-config.yml` | Configuration file |
+| Option         | Default                | Description                        |
+|----------------|------------------------|------------------------------------|
+| `--path, -p`   | current directory      | Project root directory             |
+| `--version`    | **required**           | Archive versions up to (inclusive) |
+| `--inputDir`   | `changelog`            | Input directory                    |
+| `--configFile` | `logchange-config.yml` | Configuration file                 |
 
 ## Maven Plugin Goals
 
@@ -225,27 +226,33 @@ logchange archive [options]
 
 ### Goals
 
-| Goal | Description | Command |
-|------|-------------|---------|
-| `logchange:init` | Initialize project | `mvn logchange:init` |
-| `logchange:add` | Add new entry | `mvn logchange:add` |
-| `logchange:example` | Create example entry | `mvn logchange:example` |
-| `logchange:generate` | Generate changelog | `mvn logchange:generate` |
-| `logchange:lint` | Validate entries | `mvn logchange:lint` |
-| `logchange:release` | Create release | `mvn logchange:release` |
-| `logchange:aggregate` | Aggregate projects | `mvn logchange:aggregate` |
-| `logchange:archive` | Archive versions | `mvn logchange:archive` |
+| Goal                  | Description          | Command                   |
+|-----------------------|----------------------|---------------------------|
+| `logchange:init`      | Initialize project   | `mvn logchange:init`      |
+| `logchange:add`       | Add new entry        | `mvn logchange:add`       |
+| `logchange:example`   | Create example entry | `mvn logchange:example`   |
+| `logchange:generate`  | Generate changelog   | `mvn logchange:generate`  |
+| `logchange:lint`      | Validate entries     | `mvn logchange:lint`      |
+| `logchange:release`   | Create release       | `mvn logchange:release`   |
+| `logchange:aggregate` | Aggregate projects   | `mvn logchange:aggregate` |
+| `logchange:archive`   | Archive versions     | `mvn logchange:archive`   |
+
+You can also use the following full syntax if you don't want to add logchange to `pom.xml`:
+```bash
+mvn dev.logchange:logchange-maven-plugin:init
+```
+
 
 ### Maven Properties
 
-| Property | Default | Description |
-|----------|---------|-------------|
-| `empty` | `false` | Create empty entry |
-| `fileName` | generated | Entry filename |
-| `aggregateVersion` | | Version for aggregation |
-| `changesXml` | `false` | Generate changes.xml |
-| `outputFileXml` | `changes.xml` | XML output file |
-| `version` | | Version for archiving |
+| Property           | Default       | Description             |
+|--------------------|---------------|-------------------------|
+| `empty`            | `false`       | Create empty entry      |
+| `fileName`         | generated     | Entry filename          |
+| `aggregateVersion` |               | Version for aggregation |
+| `changesXml`       | `false`       | Generate changes.xml    |
+| `outputFileXml`    | `changes.xml` | XML output file         |
+| `version`          |               | Version for archiving   |
 
 **Examples:**
 ```bash
@@ -280,16 +287,16 @@ logchange {
 
 ### Tasks
 
-| Task | Description |
-|------|-------------|
-| `logchangeInit` | Initialize directory structure |
-| `logchangeAdd` | Creates new YML entry file |
-| `logchangeExample` | Creates pre-filled example entry |
-| `logchangeGenerate` | Generates changelog from entries |
-| `logchangeLint` | Validates YML files and config |
-| `logchangeRelease` | Creates release by moving unreleased files |
-| `logchangeAggregate` | Aggregates multiple project changelogs |
-| `logchangeArchive` | Archives released versions |
+| Task                 | Description                                |
+|----------------------|--------------------------------------------|
+| `logchangeInit`      | Initialize directory structure             |
+| `logchangeAdd`       | Creates new YML entry file                 |
+| `logchangeExample`   | Creates pre-filled example entry           |
+| `logchangeGenerate`  | Generates changelog from entries           |
+| `logchangeLint`      | Validates YML files and config             |
+| `logchangeRelease`   | Creates release by moving unreleased files |
+| `logchangeAggregate` | Aggregates multiple project changelogs     |
+| `logchangeArchive`   | Archives released versions                 |
 
 **Examples:**
 ```bash
@@ -362,30 +369,30 @@ configurations:
 
 ### Entry Types
 
-| Type | Description | When to Use |
-|------|-------------|-------------|
-| `added` | New features | New functionality added |
-| `changed` | Changes to existing functionality | Modified behavior |
-| `deprecated` | Features marked for removal | Features to be removed in future |
-| `removed` | Removed features | Features that were removed |
-| `fixed` | Bug fixes | Bug corrections |
-| `security` | Security fixes | Vulnerability fixes |
-| `dependency_update` | Dependency updates | Library/framework updates |
-| `other` | Other changes | Changes not fitting other categories |
+| Type                | Description                       | When to Use                          |
+|---------------------|-----------------------------------|--------------------------------------|
+| `added`             | New features                      | New functionality added              |
+| `changed`           | Changes to existing functionality | Modified behavior                    |
+| `deprecated`        | Features marked for removal       | Features to be removed in future     |
+| `removed`           | Removed features                  | Features that were removed           |
+| `fixed`             | Bug fixes                         | Bug corrections                      |
+| `security`          | Security fixes                    | Vulnerability fixes                  |
+| `dependency_update` | Dependency updates                | Library/framework updates            |
+| `other`             | Other changes                     | Changes not fitting other categories |
 
 ### Field Validation Rules
 
-| Field | Type | Required | Validation |
-|-------|------|----------|------------|
-| `title` | String | ✅ | Non-empty string |
-| `authors` | Array | ✅ | At least one author with name, nick, url |
-| `type` | String | ✅ | Must match configured entry types |
-| `modules` | Array | ❌ | Array of strings |
-| `merge_requests` | Array | ❌ | Array of integers |
-| `issues` | Array | ❌ | Array of integers |
-| `links` | Array | ❌ | Objects with name and url fields |
-| `important_notes` | Array | ❌ | Array of strings |
-| `configurations` | Array | ❌ | Objects with required type, action, key fields |
+| Field             | Type   | Required | Validation                                     |
+|-------------------|--------|----------|------------------------------------------------|
+| `title`           | String | ✅        | Non-empty string                               |
+| `authors`         | Array  | ✅        | At least one author with name, nick, url       |
+| `type`            | String | ✅        | Must match configured entry types              |
+| `modules`         | Array  | ❌        | Array of strings                               |
+| `merge_requests`  | Array  | ❌        | Array of integers                              |
+| `issues`          | Array  | ❌        | Array of integers                              |
+| `links`           | Array  | ❌        | Objects with name and url fields               |
+| `important_notes` | Array  | ❌        | Array of strings                               |
+| `configurations`  | Array  | ❌        | Objects with required type, action, key fields |
 
 ## Configuration Reference
 
@@ -481,22 +488,22 @@ aggregates:
 
 #### Entry Template Variables
 
-| Variable | Description | Example Output |
-|----------|-------------|----------------|
-| `${prefix}` | Project name prefix (aggregation) | `**MyProject** - ` |
-| `${title}` | Entry title | `Add user authentication` |
-| `${merge_requests}` | Formatted merge request links | `!123 !456` |
-| `${issues}` | Formatted issue links | `#789 #101112` |
-| `${links}` | Formatted external links | `[JIRA-123](https://...)` |
-| `${authors}` | Formatted author information | `([John Doe](https://...) @johndoe)` |
+| Variable            | Description                       | Example Output                       |
+|---------------------|-----------------------------------|--------------------------------------|
+| `${prefix}`         | Project name prefix (aggregation) | `**MyProject** - `                   |
+| `${title}`          | Entry title                       | `Add user authentication`            |
+| `${merge_requests}` | Formatted merge request links     | `!123 !456`                          |
+| `${issues}`         | Formatted issue links             | `#789 #101112`                       |
+| `${links}`          | Formatted external links          | `[JIRA-123](https://...)`            |
+| `${authors}`        | Formatted author information      | `([John Doe](https://...) @johndoe)` |
 
 #### Author Template Variables
 
-| Variable | Description |
-|----------|-------------|
-| `${name}` | Author full name |
+| Variable  | Description            |
+|-----------|------------------------|
+| `${name}` | Author full name       |
 | `${nick}` | Author nickname/handle |
-| `${url}` | Author profile URL |
+| `${url}`  | Author profile URL     |
 
 ## Template System
 
@@ -550,41 +557,6 @@ project-root/
 - Database migration required: run `migrate-auth-tables.sql`
 - Update environment variables: add OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET
 ```
-
-## Environment Variables
-
-### CLI Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `LOGCHANGE_PATH` | Default project path | `.` |
-| `LOGCHANGE_INPUT_DIR` | Default input directory | `changelog` |
-| `LOGCHANGE_OUTPUT_FILE` | Default output file | `CHANGELOG.md` |
-| `LOGCHANGE_CONFIG_FILE` | Default config file | `logchange-config.yml` |
-
-### CI/CD Variables
-
-Useful environment variables for CI/CD pipelines:
-
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `CI_COMMIT_TAG` | Git tag for release | `v1.2.0` |
-| `GITHUB_REF_NAME` | GitHub ref name | `1.2.0` |
-| `CI_PROJECT_PATH` | Project path | `company/project` |
-
-### Usage in CI/CD
-
-```bash
-# Extract version from tag
-VERSION=${CI_COMMIT_TAG#v}  # Remove 'v' prefix
-logchange release --versionToRelease $VERSION
-
-# Dynamic configuration
-export LOGCHANGE_INPUT_DIR="docs/changelog"
-export LOGCHANGE_OUTPUT_FILE="CHANGES.md"
-logchange generate
-```
-
 
 ## Best Practices Summary
 
