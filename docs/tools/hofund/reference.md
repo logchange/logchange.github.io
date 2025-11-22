@@ -527,12 +527,11 @@ String envVarName2 = HofundConnection.getEnvVarName("user.service-v2");
 
 ## Compatibility Matrix
 
-| Hofund Version | Spring Boot | Java Version | Status |
-|----------------|-------------|-------------|---------|
-| 2.10.1         | 3.3.0+      | 17+         | Current |
-| 2.9.0          | 3.3.0+      | 17+         | Supported |
-| 2.8.0          | 3.3.0+      | 17+         | Supported |
-| 1.0.X          | 2.2.0-3.2.X | 8+          | Deprecated |
+|        Version         |     SpringBoot Version      |    Java Version    |
+|:----------------------:|:---------------------------:|:------------------:|
+|       **3.X.X**        |       from **4.0.0**        | 17 (hofund-core 8) |
+| **2.X.X (deprecated)** | from **3.3.0** to **3.5.8** | 17 (hofund-core 8) |
+| **1.0.X (deprecated)** | from **2.2.0** to **3.2.X** |         8          |
 
 ## Integration Points
 
